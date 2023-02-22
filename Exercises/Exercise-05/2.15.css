@@ -1,0 +1,46 @@
+/*h3{
+	font-size:48pt;
+	color:blue;
+	font-family: monospace;
+}*/
+a{
+	color:pink;
+	font-size: 24pt;
+	font-family: sans-serif;
+}
+a:hover{
+	color:green;
+	font-size: 48pt;
+	font-family: serif;
+}
+
+/*.main #important h3{
+	background-color: yellow;
+}*/
+.main #important a:hover{
+	color:blue;
+	font-size: 5pt;
+	font-family: monospace;
+}
+.main #important a:active{
+	color:purple;
+	font-size: 5pt;
+	font-family: monospace;
+}
+
+p.main{
+	width:500px;
+	height:500px;
+	background-color:green ;
+	margin: 50px;
+	font-size:48pt;
+}
+
+div.main:before{
+	content:"\03a9";
+}
+
+p.main:after{
+	content:url(https://www.recipetineats.com/wp-content/uploads/2017/06/Pancakes-featured.jpg);
+	
+}

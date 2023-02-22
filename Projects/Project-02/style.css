@@ -1,0 +1,47 @@
+a{
+	color:hsl(30,100%,50%);
+	font-size: 80pt;
+/*	font-family: sans-serif;*/
+}
+a:hover{
+	color:#00AAAA;
+	font-size: 80pt;
+/*	font-family: serif;*/
+}
+
+/*.main #important h3{
+	background-color: yellow;
+}*/
+/*.main #important a:hover{
+	color:blue;
+	font-size: 5pt;
+	font-family: monospace;
+}
+.main #important a:active{
+	color:purple;
+	font-size: 5pt;
+	font-family: monospace;
+}*/
+p.main{
+	width:1700px;
+	height:300px;
+	background-color:black ;
+/*	margin: 50px;*/
+/*	font-size:48pt;*/
+}
+span.project-number{
+	color:hsl(30,100%,50%);
+}
+
+span.workInfo{
+	width:1700px;
+	height:500px;
+
+	background-color:white ;
+/*	opacity: 0.5;*/
+	font-size: 15pt;
+/*	border-radius: 80%;*/
+	
+}
+
+
