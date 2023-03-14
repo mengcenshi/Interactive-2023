@@ -1,0 +1,168 @@
+
+a.end-game{
+    float:right;
+    color:hsl(30,100%,50%);
+    z-index: 1;
+    margin-right:20px;
+    font-size:25pt;
+    text-decoration: none;
+}
+
+.chess-link {
+    color: hsl(30, 100%, 50%);
+    font-size: 100pt;
+    text-decoration: none;
+/*    margin-top:200px;*/
+
+}
+
+.chess-link:hover {
+    color: #00AAAA;
+    font-size: 110pt;
+}
+
+
+.title-button{
+    font-size: 10pt;
+    z-index: 1;
+    vertical-align: inherit;
+    color:#fff;
+    background-color: #000;
+    float:top;
+    position: fixed;
+    text-align: center;
+}
+
+
+p.main{
+    width:1710px;
+    height:180px;
+/*    margin-top: 80px;
+    margin:80px;*/
+    background-color:black ;
+/*     margin: 50px;*/
+/*     font-size:48pt;*/*/
+}
+
+.container {
+  position: relative;
+}
+
+./*chess{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}*/
+
+div.text span a{
+    text-decoration: none;
+}
+
+a.history{
+    color:hsl(30,100%,50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 20px;
+    text-decoration: none;
+}
+/*span.project-number{
+    color:hsl(30,100%,50%);
+
+    display: inline-block;
+   
+}*/
+
+
+/*  opacity: 0.5;*/
+    font-size: 15pt;
+/*  border-radius: 80%;*/
+    
+}
+/*a.project-number{
+
+}*/
+* {
+    padding: 0;
+    margin: 0;
+}
+a.history:hover{
+    color:hsl(0, 100%, 50%);
+    font-size:35pt;
+}
+.shell{
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 3px;
+}
+.shell div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: 30px;
+    letter-spacing: 2px;
+}
+.image{
+    transform: translateZ(-1px) scale(1.6);
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+}
+.text{
+    height: 40vh;
+    background-color: #fff;
+    font-size: sans-serif;
+    color:hsl(30,100%,50%);
+
+}
+.joinBtn {
+    width: 10em;
+    height: 5ex;
+    background-color: gold;
+    border: 2px solid firebrick;
+    border-radius: 10px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.joinBtn:hover {
+    background-color:lightblue;
+}
+
+
+
+/*.text h1{
+    color: #000;
+     margin-bottom: 20px;
+}*/
+.heading{
+    z-index: +1;
+    transform: translateY(-30vh) translateZ(1px);
+    color: #fff;
+    font-size: 40px;
+    background-color: #000;
+}
+
+@media print{
+        div.shell{
+            position: relative;
+            page-break-after: always;
+        }
+
+        .heading{
+            position: fixed;
+            bottom: 0px;
+        }
+
+        .text{
+            position: relative;
+
+        }
+}
+
+

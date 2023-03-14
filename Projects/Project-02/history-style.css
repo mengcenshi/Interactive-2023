@@ -1,0 +1,29 @@
+
+.history img{
+	
+	float:right;
+
+	border-radius: 0.3vw;
+}
+.history-2 img{
+	position: absolute;
+	float:right;
+	padding-top: 2000px;
+	border-radius: 0.3vw;
+	z-index: 1;
+}
+span.project-number{
+	color:hsl(30,100%,50%);
+}
+
+span.workInfo{
+	width:1700px;
+	height:500px;
+
+	background-color:white ;
+/*	opacity: 0.5;*/
+	font-size: 15pt;
+
+/*	border-radius: 80%;*/
+	
+}

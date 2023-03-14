@@ -1,3 +1,34 @@
+.paper-background {
+    mix-blend-mode: multiply; 
+    pointer-events: none; 
+    }
+.w-embed:after, .w-embed:before {
+    content: " ";
+    display: table;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 2;
+    grid-row-end: 2;
+}
+*, *::after, *::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.w-embed:after {
+    clear: both;
+}
+.w-embed:after, .w-embed:before {
+    content: " ";
+    display: table;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 2;
+    grid-row-end: 2;
+}
+*, *::after, *::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 .main a{
 	color:hsl(30,100%,50%);
 	font-size: 80pt;

@@ -1,0 +1,53 @@
+:root{
+	font-size: 10px;
+}
+h1{
+	font-size: 5rem;
+	display: inline-block;
+	padding: 0 5rem;
+	color: white;
+}
+
+#cover{
+	background-image: linear-gradient(45deg,blueviolet,palegreen,slateblue);
+	padding: 5rem;
+}
+.illustration{
+	background-color: magenta;
+	padding:5rem;
+	display: inline-block;
+	width: 50%;
+}
+.circle{
+	width: 10rem;
+	height:10rem;
+	border-radius: 100%;
+	background-color: gray;
+	filter: blur(5px);
+	mix-blend-mode:lighten ;
+	margin: auto;
+}
+.text{
+	background-color: limegreen;
+	padding:5rem;
+	display: inline-block;
+	width: 50%;
+	font-size: 4rem;
+	color:white;
+}
+.container{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+@media print and (orientation: portrait){
+	#cover{
+		page-break-after: always;
+		width:100%;
+		height:100vh;
+	}
+	h1{
+		font-size: 15rem;
+	}
+}
