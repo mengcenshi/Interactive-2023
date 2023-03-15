@@ -12,14 +12,23 @@
     mix-blend-mode: multiply; 
     pointer-events: none; 
     }
-a{
-	padding-top:50px;
-	color:hsl(30,100%,50%);
-	font-size: 80pt;
-	text-decoration:none
-/*	font-family: sans-serif;*/
+a.bottoon{
+    
+    position: absolute;
+    z-index: 1;
+    top: 48px;
+    left: 1648px;
+    text-decoration: none;
 }
-a:hover{
+.chess-link {
+    color: hsl(30, 100%, 50%);
+    font-size: 100pt;
+    text-decoration: none;
+/*    margin-top:200px;*/
+
+}
+
+.chess-link:hover{
 	padding-top:50px;
 	color:#00AAAA;
 	font-size: 80pt;

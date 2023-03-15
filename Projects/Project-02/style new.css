@@ -16,6 +16,14 @@ a.end-game{
 
 }
 
+a.bottoon{
+    
+    position: absolute;
+    z-index: 1;
+    top: 18px;
+    left: 1368px;
+     text-decoration: none;
+}
 .chess-link:hover {
     color: #00AAAA;
     font-size: 110pt;
@@ -68,6 +76,7 @@ a.history{
     font-size: 20px;
     text-decoration: none;
 }
+
 /*span.project-number{
     color:hsl(30,100%,50%);
 
@@ -147,6 +156,7 @@ a.history:hover{
     font-size: 40px;
     background-color: #000;
 }
+
 
 @media print{
         div.shell{
