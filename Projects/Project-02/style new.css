@@ -125,7 +125,7 @@ a.history:hover{
     background-color: #fff;
     font-size: sans-serif;
     color:hsl(30,100%,50%);
-
+    padding: 90px;
 }
 .joinBtn {
     width: 10em;
