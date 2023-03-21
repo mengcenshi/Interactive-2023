@@ -1,39 +1,2006 @@
-.entry div:before{
-    content: " ";
-    display: table;
-}
-.entry div:after{
-    cleat:both;
-}
-@media (max-width: 959px)
-#space-pizza, #space-donuts {
-    min-height: 280px;
-}
-#space-donuts {
-    background-color: black;
-    background-image: radial-gradient(circle at 5% 8%,rgba(255,255,255,0.3) 1%,transparent 1%),radial-gradient(circle at 16% 18%,rgba(255,255,255,0.3) 1%,transparent 1%),radial-gradient(circle at 26% 48%,rgba(255,255,255,0.3) 1%,transparent 1%),radial-gradient(circle at 40% 70%,rgba(255,255,255,0.3) 1%,transparent 1%),radial-gradient(circle at 30% 94%,rgba(255,255,255,0.3) 1%,transparent 1%),radial-gradient(circle at 60% 60%,rgba(255,255,255,0.3) 1%,transparent 1%),radial-gradient(circle at 55% 86%,rgba(255,255,255,0.3) 1%,transparent 1%),radial-gradient(circle at 80% 5%,rgba(255,255,255,0.3) 1%,transparent 1%),radial-gradient(circle at 88% 26%,rgba(255,255,255,0.3) 1%,transparent 1%),radial-gradient(circle at 78% 40%,rgba(255,255,255,0.3) 1%,transparent 1%),radial-gradient(circle at 50% 10%,#c69c6a 6%,transparent 6%),radial-gradient(circle at 58% 12%,#c69c6a 5%,transparent 5%),radial-gradient(circle at 63% 18%,#c69c6a 5%,transparent 5%),radial-gradient(circle at 64% 25%,#c69c6a 7%,transparent 7%),radial-gradient(circle at 61% 34%,#c69c6a 6%,transparent 6%),radial-gradient(circle at 55% 39%,#c69c6a 5%,transparent 5%),radial-gradient(circle at 46% 39%,#c69c6a 6%,transparent 6%),radial-gradient(circle at 40% 34%,#c69c6a 7%,transparent 7%),radial-gradient(circle at 36% 27%,#c69c6a 5%,transparent 5%),radial-gradient(circle at 39% 16%,#c69c6a 7%,transparent 7%),radial-gradient(circle at 50% 25%,transparent 8%,#c69c6a 8%,#c69c6a 18%,#96540c 18%,#96540c 25%,transparent 25%),radial-gradient(circle at 8% 62%,#ef54b4 1%,transparent 1%),radial-gradient(circle at 12% 70%,#ef54b4 1%,transparent 1%),radial-gradient(circle at 4% 65%,#29caef 1%,transparent 1%),radial-gradient(circle at 15% 77%,white 1%,transparent 1%),radial-gradient(circle at 10% 78%,#29caef 1%,transparent 1%),radial-gradient(circle at 8% 85%,#ef54b4 1%,transparent 1%),radial-gradient(circle at 1% 89%,white 1%,transparent 1%),radial-gradient(circle at 0 61%,#5e2d1c 5%,transparent 5%),radial-gradient(circle at 8% 64%,#5e2d1c 6%,transparent 6%),radial-gradient(circle at 13% 70%,#5e2d1c 5%,transparent 5%),radial-gradient(circle at 13% 78%,#5e2d1c 5%,transparent 5%),radial-gradient(circle at 10% 84%,#5e2d1c 5%,transparent 5%),radial-gradient(circle at 0 89%,#5e2d1c 5%,transparent 5%),radial-gradient(circle at 0 75%,transparent 6%,#5e2d1c 6%,#5e2d1c 13%,#96540c 13%,#96540c 18%,transparent 18%),radial-gradient(circle at 96% 63%,#ef54b4 1%,transparent 1%),radial-gradient(circle at 89% 63%,#29caef 1%,transparent 1%),radial-gradient(circle at 92% 68%,white 1%,transparent 1%),radial-gradient(circle at 84% 73%,#ef54b4 1%,transparent 1%),radial-gradient(circle at 90% 78%,#29caef 1%,transparent 1%),radial-gradient(circle at 87% 85%,white 1%,transparent 1%),radial-gradient(circle at 95% 84%,#ef54b4 1%,transparent 1%),radial-gradient(circle at 100% 61%,#5e2d1c 5%,transparent 5%),radial-gradient(circle at 90% 64%,#5e2d1c 5%,transparent 5%),radial-gradient(circle at 86% 74%,#5e2d1c 6%,transparent 6%),radial-gradient(circle at 89% 83%,#5e2d1c 5.5%,transparent 5.5%),radial-gradient(circle at 100% 89%,#5e2d1c 5%,transparent 5%),radial-gradient(circle at 100% 75%,transparent 6%,#5e2d1c 6%,#5e2d1c 13%,#96540c 13%,#96540c 18%,transparent 18%);
-    background-size: 100px 100px;
-    background-position: center 20px;
-}
-
-@media (min-width: 960px).entry {
-    float: left;
-    width: 50%;
-  
-}
-
-.entry {
-    text-align: center;
-    min-height: 400px;
+.canvas {
+    width: 576px;
+    height: 900px;
+    margin: 15px auto;
+    background: white;
     position: relative;
-    overflow: hidden;
+    border: solid black 1px;
+    transition: 1s height, 1s 1s width;
 }
-div {
-    display: block;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+/*.canvas:hover{
+    height:930px;
+    width:720px ;
+}*/
+.background{
+    background-color: #dacdb6;
+    position: absolute;
+    width: 576px;
+    height: 900px;
+    z-index: 1;
+
 }
+
+/*    black line*/
+    .rectangle1 {
+        height: 15px;
+        width: 144px;
+        background-color:#000;
+        position: absolute;
+        z-index: 10;
+        top: 30px;
+        animation-name: h1;
+        animation-duration: 6s; 
+        animation-iteration-count: unset;
+    }
+    .rectangle2 {
+        height: 15px;
+        width: 144px;
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 60px;
+        animation-name: h1;
+        animation-duration: 6s; 
+        animation-iteration-count: unset;
+    }
+    .rectangle3 {
+        height: 15px;
+        width: 240px;
+        left: 144px;
+        background-color: #000;
+        position: absolute;
+        z-index: 19;
+        top: 90px;
+        animation-name: h2;
+        animation-duration: 6s; 
+        animation-iteration-count: unset;
+    }
+    .rectangle4 {
+        height: 15px;
+        width: 240px;
+        left: 144px;
+        background-color: #000;
+        position: absolute;
+        z-index: 19;
+        top: 120px;
+        animation-name: h2;
+        animation-duration: 10s; 
+        animation-iteration-count: unset;
+    }
+    .rectangle5 {
+        height: 15px;
+        width: 240px;
+        left: 144px;
+        background-color: #000;
+        position: absolute;
+        z-index: 19;
+        top: 150px;
+        animation-name: h2;
+        animation-duration: 5s; 
+        animation-iteration-count: unset;
+    }
+    .black13{
+        height: 15px;
+        width: 144px;
+        
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 555px;
+        animation-name: h3;
+        animation-duration: 5s; 
+        animation-iteration-count: infinite;
+    }
+
+    .rectangle6 {
+        height: 15px;
+        width: 144px;
+        
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 585px;
+        animation-name: h3;
+        animation-duration: 10s; 
+        animation-iteration-count: infinite;
+    }
+    .rectangle7 {
+        height: 15px;
+        width: 144px;
+        
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 615px;
+        animation-name: h3;
+        animation-duration: 11s; 
+        animation-iteration-count: infinite;
+    }
+    .rectangle8 {
+        height: 15px;
+        width: 144px;
+        
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 645px;
+        animation-name: h3;
+        animation-duration: 12s; 
+        animation-iteration-count: infinite;
+    }
+    .rectangle9 {
+        height: 15px;
+        width: 144px;
+        
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 675px;
+        animation-name: h3;
+        animation-duration: 13s; 
+        animation-iteration-count: infinite;
+    }
+    .rectangle10 {
+        height: 15px;
+        width: 144px;
+        
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 705px;
+        animation-name: h3;
+        animation-duration: 14s; 
+        animation-iteration-count: infinite;
+    }
+    .rectangle11 {
+        height: 15px;
+        width: 144px;
+    
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 735px;
+        animation-name: h3;
+        animation-duration: 15s; 
+        animation-iteration-count: infinite;
+    }
+    .rectangle12 {
+        height: 15px;
+        width: 144px;
+        
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 765px;
+        animation-name: h3;
+        animation-duration: 16s; 
+        animation-iteration-count: infinite;
+    }
+    .rectangle13 {
+        height: 15px;
+        width: 144px;
+        
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 795px;
+        animation-name: h3;
+        animation-duration: 17s; 
+        animation-iteration-count: infinite;
+    }
+
+
+    @keyframes h1{
+        0% {
+            
+            height:15px;
+            width:144px;
+            background-color: #dacdb6;
+        }
+        100% {
+            
+            height:15px;
+            width:0px;
+            background-color: #000;
+
+        }
+    }
+    @keyframes h2{
+        0% {
+            left: 144px;
+            height:15px;
+            width:0px;
+            background-color: #dacdb6;
+        }
+        100% {
+            left: 144px;
+            height:15px;
+            width:250px;
+            background-color: #000;
+
+        }
+    }
+    @keyframes h3{
+       
+        0% {
+            left: 0px;
+            height:15px;
+            width:0px;
+            background-color: #dacdb6;
+        }
+        100% {
+            left: 0px;
+            height:15px;
+            width:144px;
+            background-color: #000;
+
+        }
+    }
+    .rectangle14 {
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 555px; 
+        animation: drawLine 1s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    }
+    .rectangle15 {
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 585px;
+        animation: drawLine 12s cubic-bezier(0.42, 0, 0.58, 1) infinite; 
+    }
+    .rectangle16 {
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 615px; 
+        animation: drawLine 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    }
+    .rectangle17 {
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 645px; 
+        animation: drawLine 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    }
+    .rectangle18 {
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 675px; 
+        animation: drawLine 9s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    }
+    .rectangle19 {
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color: #000;
+        position: absolute;
+        z-index: 10;
+        top: 705px; 
+        animation: drawLine 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    }
+    
+
+    .line1 {
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 705px;
+        background-color: #000;
+        left: 24px;
+        
+        transform-origin: left center;
+        animation: drawLine 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .line2 {
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 705px;
+        background-color: #000;
+        left: 72px;
+        
+        transform-origin: left center;
+        animation: drawLine 6s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+
+    .line3 {
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 705px;
+        background-color: #000;
+        left: 120px;
+        transform-origin: left center;
+        animation: drawLine 7s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .line4 {
+        position: absolute;
+        z-index: 15;
+        width: 24px;
+        height: 720px;
+        background-color: #000;
+        left: 168px;
+        transform-origin: left center;
+        animation: drawLine 3s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+      
+
+      @keyframes drawLine {
+        0% {
+          transform: scaleX(0);
+        }
+        10% {
+          transform: scaleX(1);
+        }
+        90% {
+          transform: scaleX(1);
+        }
+        100% {
+          transform: scaleX(0);
+        }
+      }
+
+    .black1{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 15px;
+        background-color: #000;
+        top:15px;
+        left: 384px;
+      }
+    .black2{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 15px;
+        background-color: #000;
+        top:45px;
+        left: 384px;
+      }
+    .black3{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 15px;
+        background-color: #000;
+        top:75px;
+        left: 384px;
+      } 
+    .black4{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 15px;
+        background-color: #000;
+        top:825px;
+        left: 144px;
+      } 
+    .black5{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 15px;
+        background-color: #000;
+        top:855px;
+        left: 144px;
+      } 
+    .black6{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 15px;
+        background-color: #000;
+        top:885px;
+        left: 144px;
+      } 
+    .black7{
+        position: absolute;
+        z-index: 15;
+        width: 192px;
+        height: 15px;
+        background-color: #000;
+        left: 192px;
+        top:795px;
+        transform-origin: left center;
+        animation: lalala 6s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .black8{
+        position: absolute;
+        z-index: 15;
+        width: 192px;
+        height: 15px;
+        top:825px;
+        background-color: #000;
+        left: 192px;
+        transform-origin: left center;
+        animation: lalala 7s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+
+    .black9{
+        position: absolute;
+        z-index: 9;
+        width: 24px;
+        height: 165px;
+        top:735px;
+        background-color: #000;
+        left: 408px;
+        transform-origin: left center;
+        animation: lalala 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .black10{
+        position: absolute;
+        z-index: 9;
+        width: 24px;
+        height: 165px;
+        top:735px;
+        background-color: #000;
+        left: 456px;
+        transform-origin: left center;
+        animation: lalala 11s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .black11{
+        position: absolute;
+        z-index: 9;
+        width: 24px;
+        height: 75px;
+        top:735px;
+        background-color: #000;
+        left: 504px;
+        transform-origin: left center;
+        animation: lalala 12s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .black12{
+        position: absolute;
+        z-index: 9;
+        width: 24px;
+        height: 75px;
+        top:735px;
+        background-color: #000;
+        left: 552px;
+        transform-origin: left center;
+        animation: lalala 13s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .black14{
+        position: absolute;
+        z-index: 16;
+        width: 96px;
+        height: 30px;
+        top:300px;
+        background-color: #000;
+        left: 240px;
+        transform-origin: bottom;
+        animation: lalala 3s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .black15{
+        position: absolute;
+        z-index: 16;
+        width: 96px;
+        height: 30px;
+        top:360px;
+        background-color: #000;
+        left: 240px;
+        transform-origin: bottom;
+        animation: lalala 3s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+
+    .black16{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 795px;
+        top:0px;
+        background-color: #000;
+        left: 432px;
+        transform-origin: top;
+        animation: drawLine 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .black17{
+        position: absolute;
+        z-index: 27;
+        width: 24px;
+        height: 165px;
+        top:0px;
+        background-color: #000;
+        left: 456px;
+        transform-origin: bottom;
+        animation: lalala 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .black18{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 180px;
+        top:540px;
+        background-color: #000;
+        left: 456px;
+        transform-origin: left;
+        animation: lalala 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .black19{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 450px;
+        top:90px;
+        background-color: #000;
+        left: 408px;
+        transform-origin: left;
+        animation: lalala 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+
+    .black20{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 15px;
+        top:195px;
+        background-color: #000;
+        left: 456px;
+      }
+    .black21{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 15px;
+        top:225px;
+        background-color: #000;
+        left: 456px;
+      }
+    .black22{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 15px;
+        top:255px;
+        background-color: #000;
+        left: 456px;
+      }
+    .black23{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 15px;
+        top:285px;
+        background-color: #000;
+        left: 456px;
+      }
+    .black24{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 15px;
+        top:315px;
+        background-color: #000;
+        left: 456px;
+      }
+    .black25{
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 15px;
+        top:345px;
+        background-color: #000;
+        left: 456px;
+      }
+
+    .black26{
+        position: absolute;
+        z-index: 20;
+        width: 96px;
+        height: 15px;
+        top:30px;
+        background-color: #000;
+        left: 480px;
+        transform-origin: left;
+        animation: lalala 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+
+    .black27{
+        position: absolute;
+        z-index: 20;
+        width: 96px;
+        height: 15px;
+        top:60px;
+        background-color: #000;
+        left: 480px;
+        transform-origin: left;
+        animation: lalala 10s cubic-bezier(0, 0, 0.8, 1)  infinite;
+      }
+
+
+/*gray line*/
+    .line5 {
+        position: absolute;
+        z-index: 12;
+        width: 192px;
+        height: 780px;
+        background-color: #c6c2b8;
+        left: 144px;
+        transform-origin: right center;
+        animation: drawLine 3s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .line6 {
+        position: absolute;
+        z-index: 18;
+        width: 120px;
+        height: 270px;
+        background-color: #c6c2b8;
+        left: 456px;
+        top:180px;
+        transform-origin: right center;
+        animation: drawLine 6s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    
+
+    .rectangle20{
+        height: 15px;
+        width: 192px;
+        left:0px;
+        background-color:#c6c2b8;
+        position: absolute;
+        z-index: 10;
+        top: 180px; 
+        animation: drawLine 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .rectangle21{
+        height: 15px;
+        width: 192px;
+        left:0px;
+        background-color:#c6c2b8;
+        position: absolute;
+        z-index: 10;
+        top: 210px; 
+        animation: drawLine 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .rectangle22{
+        height: 15px;
+        width: 192px;
+        left:0px;
+        background-color:#c6c2b8;
+        position: absolute;
+        z-index: 10;
+        top: 240px; 
+        animation: drawLine 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+
+    .rectangle23{
+        height: 15px;
+        width: 192px;
+        left:0px;
+        background-color:#c6c2b8;
+        position: absolute;
+        z-index: 10;
+        top: 270px; 
+        animation: drawLine 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .rectangle24{
+        height: 15px;
+        width: 192px;
+        left:0px;
+        background-color:#c6c2b8;
+        position: absolute;
+        z-index: 10;
+        top: 300px; 
+        animation: drawLine 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+
+    .rectangle25{
+        height: 15px;
+        width: 192px;
+        left:0px;
+        background-color:#c6c2b8;
+        position: absolute;
+        z-index: 10;
+        top: 330px; 
+        animation: drawLine 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .rectangle26{
+        height: 15px;
+        width: 192px;
+        left:0px;
+        background-color:#c6c2b8;
+        position: absolute;
+        z-index: 10;
+        top: 360px; 
+        animation: drawLine 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .rectangle27{
+        height: 15px;
+        width: 192px;
+        left:0px;
+        background-color:#c6c2b8;
+        position: absolute;
+        z-index: 10;
+        top: 390px; 
+        animation: drawLine 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .rectangle28{
+        height: 15px;
+        width: 192px;
+        left:0px;
+        background-color:#c6c2b8;
+        position: absolute;
+        z-index: 10;
+        top: 420px; 
+        animation: drawLine 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .line7 {
+        position: absolute;
+        z-index: 13;
+        width: 48px;
+        height: 900px;
+        background-color: #c6c2b8;
+        left: 144px;
+        transform-origin:bottom;
+        animation: drawLine 8s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .line8 {
+        position: absolute;
+        z-index: 20;
+        width: 24px;
+        height: 90px;
+        background-color: #c6c2b8;
+        left: 408px;
+        transform-origin:top;
+        animation: biubiu 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      }
+    .line9 {
+        position: absolute;
+        z-index: 20;
+        width: 48px;
+        height: 15px;
+        background-color: #c6c2b8;
+        top:465px;
+        left: 336px;
+      }
+    .line10 {
+        position: absolute;
+        z-index: 20;
+        width: 48px;
+        height: 15px;
+        background-color: #c6c2b8;
+        top:495px;
+        left: 336px;
+    }
+    .line11 {
+        position: absolute;
+        z-index: 20;
+        width: 48px;
+        height: 15px;
+        background-color: #c6c2b8;
+        top:525px;
+        left: 336px;
+    }
+    .line12 {
+        position: absolute;
+        z-index: 20;
+        width: 48px;
+        height: 15px;
+        background-color: #c6c2b8;
+        top:720px;
+        left: 336px;
+    }
+    .line13 {
+        position: absolute;
+        z-index: 20;
+        width: 48px;
+        height: 15px;
+        background-color: #c6c2b8;
+        top:750px;
+        left: 336px;
+    }
+
+
+
+@keyframes biubiu {
+        0% {
+          transform: scaleX(0);
+        }
+        30% {
+          transform: scaleX(1);
+        }
+        90% {
+          transform: scaleX(1);
+        }
+        100% {
+          transform: scaleX(0);
+        }
+      }
+
+/*fleshcolor*/
+    .rectangle29{
+        height: 15px;
+        width: 144px;
+        left:0px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 30;
+        transform-origin:top;
+        top:105px; 
+        animation: biubiu 8s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+    .rectangle30{
+        height: 15px;
+        width: 144px;
+        left:0px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 30;
+        transform-origin:top;
+        top:135px; 
+        animation: biubiu 7s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+    .rectangle31{
+        height: 15px;
+        width: 144px;
+        left:0px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 30;
+        transform-origin:top;
+        top:165px; 
+        animation: biubiu 6s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+    .rectangle32{
+        height: 90px;
+        width: 144px;
+        left:0px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 13;
+        transform-origin:top;
+        top:450px; 
+        animation: drawLine 6s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+    .rectangle33{
+        height: 15px;
+        width: 24px;
+        left:168px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:195px; 
+    }
+    .rectangle34{
+        height: 15px;
+        width: 24px;
+        left:168px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:225px; 
+    }
+    .rectangle35{
+        height: 15px;
+        width: 24px;
+        left:168px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:255px; 
+    }
+    .fleshcolor1{
+        height: 15px;
+        width: 240px;
+        left:192px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:270px; 
+        transform-origin:left;
+        animation: lalala 11s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+
+    }
+    .rectangle36{
+        height: 15px;
+        width: 240px;
+        left:168px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:285px; 
+    }
+
+    .rectangle37{
+        height: 15px;
+        width: 24px;
+        left:168px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:315px; 
+    }
+    .fleshcolor2{
+        height: 15px;
+        width: 240px;
+        left:192px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:330px; 
+        transform-origin:left;
+        animation: lalala 11s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+
+    }
+    .rectangle38{
+        height: 15px;
+        width: 240px;
+        left:168px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:345px; 
+    }
+    .rectangle39{
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:345px; 
+        transform-origin:right;
+        animation: lalala 11s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+    .rectangle40{
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:195px; 
+        transform-origin:right;
+        animation: lalala 6s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+    .rectangle41{
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:225px; 
+        transform-origin:right;
+        animation: lalala 7s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+    .rectangle42{
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:255px; 
+        transform-origin:right;
+        animation: lalala 8s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+
+    .rectangle43{
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:285px; 
+        transform-origin:right;
+        animation: lalala 9s cubic-bezier(0.42, 0, 0.58, 1) infinite;      
+    }
+    .rectangle44{
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:315px; 
+        transform-origin:right;
+        animation: lalala 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+    .rectangle45{
+        height: 90px;
+        width: 192px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:0px; 
+        transform-origin:top;
+        animation: drawLine 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+    .rectangle46{
+        height: 180px;
+        width:192px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 9;
+        top:540px; 
+    }
+    .line15 {
+        position: absolute;
+        z-index: 20;
+        width: 48px;
+        height: 15px;
+        background-color: #d7b188;
+        top:540px;
+        left:144px;
+      }
+    .line16 {
+        position: absolute;
+        z-index: 20;
+        width: 48px;
+        height: 15px;
+        background-color: #d7b188;
+        top:570px;
+        left: 144px;
+    }
+    .line17 {
+        position: absolute;
+        z-index: 20;
+        width: 48px;
+        height: 15px;
+        background-color: #d7b188;
+        top:600px;
+        left: 144px;
+    }
+    .line18 {
+        position: absolute;
+        z-index: 20;
+        width: 48px;
+        height: 15px;
+        background-color: #d7b188;
+        top:630px;
+        left: 144px;
+    }
+    .line19 {
+        position: absolute;
+        z-index: 20;
+        width: 48px;
+        height: 15px;
+        background-color: #d7b188;
+        top:660px;
+        left: 144px;
+    }
+    .line20 {
+        position: absolute;
+        z-index: 20;
+        width: 48px;
+        height: 15px;
+        background-color: #d7b188;
+        top:690px;
+        left: 144px;
+    }      
+    .line21{
+        height: 15px;
+        width: 144px;
+        left:192px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 19;
+        top:840px; 
+        transform-origin:top;
+        animation: lalala 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+
+    .line22{
+        height: 15px;
+        width: 144px;
+        left:192px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 20;
+        top:870px; 
+        transform-origin:top;
+        animation: lalala 12s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+
+    .line23{
+        height: 180px;
+        width: 24px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 17;
+        top:0px; 
+        transform-origin:top;
+        animation: drawLine 9s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+   .line24{
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 27;
+        top:105px; 
+        transform-origin:right;
+        animation: drawLine 3s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+    .line25{
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 27;
+        top:135px; 
+        transform-origin:right;
+        animation: drawLine 3s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+    .line26{
+        height: 15px;
+        width: 192px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 21;
+        top:165px; 
+        transform-origin:right;
+        animation: drawLine 3s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+    .line27{
+        height: 90px;
+        width: 24px;
+        left:504px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 27;
+        top:90px; 
+        transform-origin:top;
+        animation: drawLine 9s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+    .line28{
+        height: 90px;
+        width: 24px;
+        left:552px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 27;
+        top:90px; 
+        transform-origin:top;
+        animation: drawLine 9s cubic-bezier(0.42, 0, 0.58, 1) infinite;   
+    }
+    .line29{
+        height: 270px;
+        width: 24px;
+        left:480px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 21;
+        top:180px; 
+        transform-origin:bottom;
+        animation: drawLine 5s cubic-bezier(0.6, 0, 0.9, 1) infinite;   
+    }
+
+    .line30{
+        height: 270px;
+        width: 24px;
+        left:528px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 21;
+        top:180px; 
+        transform-origin:bottom;
+        animation: drawLine 6s cubic-bezier(0.6, 0, 0.9, 1) infinite;   
+    }
+
+    .line31{
+        height: 450px;
+        width: 120px;
+        left: 456px;
+        background-color: #d7b188;
+        position: absolute;
+        z-index: 6;
+        top: 450px;
+    }
+
+    .line32{
+        height: 15px;
+        width: 24px;
+        left:408px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 21;
+        top:810px; 
+        transform-origin:left;
+        animation: drawLine 4s cubic-bezier(0.6, 0, 0.9, 1) infinite;   
+    }
+
+    .line33{
+        height: 15px;
+        width: 24px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 21;
+        top:825px; 
+        transform-origin:right;
+        animation: drawLine 5s cubic-bezier(0.6, 0, 0.9, 1) infinite;   
+    }
+
+    .line34{
+        height: 15px;
+        width: 24px;
+        left:408px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 21;
+        top:840px; 
+        transform-origin:left;
+        animation: drawLine 6s cubic-bezier(0.6, 0, 0.9, 1) infinite;   
+    }
+
+    .line35{
+        height: 15px;
+        width: 24px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 21;
+        top:855px; 
+        transform-origin:right;
+        animation: drawLine 7s cubic-bezier(0.6, 0, 0.9, 1) infinite;   
+    }
+
+    .line36{
+        height: 15px;
+        width: 24px;
+        left:408px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 21;
+        top:870px; 
+        transform-origin:left;
+        animation: drawLine 8s cubic-bezier(0.6, 0, 0.9, 1) infinite;   
+    }
+
+    .line37{
+        height: 15px;
+        width: 24px;
+        left:384px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 21;
+        top:885px; 
+        transform-origin:right;
+        animation: drawLine 9s cubic-bezier(0.6, 0, 0.9, 1) infinite;   
+    }
+    .line38{
+        height: 90px;
+        width: 24px;
+        left:504px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index: 30;
+        top:810px; 
+        transform-origin:right;
+        animation: drawLine 9s cubic-bezier(0.6, 0, 0.9, 1) infinite;   
+    }
+    .line39{
+        height: 90px;
+        width: 24px;
+        left:552px;
+        background-color:#d7b188;
+        position: absolute;
+        z-index:30;
+        top:810px; 
+        transform-origin:right;
+        animation: drawLine 9s cubic-bezier(0.6, 0, 0.9, 1) infinite;   
+    }
+    
+
+
+    
+
+    @keyframes lalala{
+        0% {
+          transform: scaleX(0);
+        }
+        20% {
+          transform: scaleX(1);
+        }
+        60% {
+          transform: scaleX(1);
+        }
+        100% {
+          transform: scaleX(0);
+        }
+      }
+/*red color*/
+    .red1{
+        height: 90px;
+        width: 24px;
+        left:24px;
+        top:90px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 9s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+    }
+    .red2{
+        height: 90px;
+        width: 24px;
+        left:72px;
+        top:90px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 9s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.2;
+    }
+    .red3{
+        height: 90px;
+        width: 24px;
+        left:120px;
+        top:90px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 9s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    @keyframes pilipala{
+       0% {
+          transform: scaleX(0);
+        }
+        20% {
+          transform: scaleX(1);
+          opacity: 0.5;
+        }
+        30% {
+          transform: scaleX(1);
+          opacity: 1;
+        }
+        90% {
+          transform: scaleX(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scaleX(0);
+          opacity: 0;
+        }
+    }
+    .red4{
+        height: 15px;
+        width: 24px;
+        left:144px;
+        top:375px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 4s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red5{
+        height: 15px;
+        width: 24px;
+        left:144px;
+        top:405px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:right;
+        animation: pilipala 5s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.8;
+    }
+    .red6{
+        height: 15px;
+        width: 24px;
+        left:144px;
+        top:435px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 6s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:1;
+    }
+    .red7{
+        height: 15px;
+        width: 24px;
+        left:144px;
+        top:465px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:right;
+        animation: pilipala 7s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red8{
+        height: 15px;
+        width: 24px;
+        left:144px;
+        top:495px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 8s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red9{
+        height: 15px;
+        width: 24px;
+        left:144px;
+        top:525px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 9s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red10{
+        height: 15px;
+        width: 120px;
+        left:24px;
+        top:810px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 3s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red11{
+        height: 15px;
+        width: 120px;
+        left:24px;
+        top:840px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 3s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red12{
+        height: 15px;
+        width:120px;
+        left:24px;
+        top:870px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 3s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red13{
+        height: 15px;
+        width:96px;
+        left:240px;
+        top:180px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:bottom;
+        animation: pilipala 10s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red14{
+        height: 15px;
+        width:96px;
+        left:240px;
+        top:210px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:bottom;
+        animation: pilipala 10s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red15{
+        height: 15px;
+        width:96px;
+        left:240px;
+        top:240px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:bottom;
+        animation: pilipala 10s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red16{
+        height: 30px;
+        width:192px;
+        left:192px;
+        top:570px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 10s cubic-bezier(0.9, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red17{
+        height: 30px;
+        width:192px;
+        left:192px;
+        top:630px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:right;
+        animation: pilipala 10s cubic-bezier(0.9, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red18{
+        height: 30px;
+        width:192px;
+        left:192px;
+        top:690px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 10s cubic-bezier(0.9, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red19{
+        height: 75px;
+        width:144px;
+        left:432px;
+        top:90px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:right;
+        animation: pilipala 10s cubic-bezier(0.9, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red20{
+        height: 15px;
+        width: 24px;
+        left:408px;
+        top:375px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 4s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red21{
+        height: 15px;
+        width: 24px;
+        left:408px;
+        top:405px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:right;
+        animation: pilipala 5s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.8;
+    }
+    .red22{
+        height: 15px;
+        width: 24px;
+        left:408px;
+        top:435px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 6s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:1;
+    }
+    .red23{
+        height: 15px;
+        width: 24px;
+        left:408px;
+        top:465px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:right;
+        animation: pilipala 7s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red24{
+        height: 15px;
+        width: 24px;
+        left:408px;
+        top:495px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 8s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red25{
+        height: 15px;
+        width: 24px;
+        left:408px;
+        top:525px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:left;
+        animation: pilipala 9s cubic-bezier(0.6, 0, 0.9, 1) infinite;
+        animation-delay:0.4;
+    }
+
+    .red26{
+        height: 15px;
+        width: 120px;
+        left:432px;
+        top:810px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:right;
+        animation: pilipala 9s cubic-bezier(0.6, 0, 1, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red27{
+        height: 15px;
+        width: 120px;
+        left:432px;
+        top:840px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:right;
+        animation: pilipala 9s cubic-bezier(0.6, 0, 1, 1) infinite;
+        animation-delay:0.4;
+    }
+    .red28{
+        height: 15px;
+        width:120px;
+        left:432px;
+        top:870px; 
+        background-color:#cf4835;
+        position: absolute;
+        z-index: 23;
+        transform-origin:right;
+        animation: pilipala 9s cubic-bezier(0.6, 0, 1, 1) infinite;
+        animation-delay:0.4;
+    }
+/*background color*/
+    .bgcolor1{
+        height: 15px;
+        width:144px;
+        left:0px;
+        top:375px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 29;
+        transform-origin:right;
+        animation: drawLine 10s cubic-bezier(0.6, 0, 1, 1) infinite;
+    }
+    .bgcolor2{
+        height: 15px;
+        width:144px;
+        left:0px;
+        top:405px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 29;
+        transform-origin:right;
+        animation: drawLine 10s cubic-bezier(0.6, 0, 1, 1) infinite;
+    }
+    .bgcolor3{
+        height: 15px;
+        width:144px;
+        left:0px;
+        top:435px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 29;
+        transform-origin:right;
+        animation: drawLine 10s cubic-bezier(0.6, 0, 1, 1) infinite;
+    }
+    .bgcolor4{
+        height: 360px;
+        width:24px;
+        left:168px;
+        top:180px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 16;
+        transform-origin:top;
+        animation: wirde 10s  infinite;
+    }
+
+    
+@keyframes wirde{
+    0%{
+        height: 0%;
+    }
+    20%{
+        height: 360px;
+    }
+    90%{
+        height: 360px;
+    }
+    100%{
+        height: 0%;
+    }
+}
+    .bgcolor5{
+        height: 15px;
+        width:192px;
+        left:0px;
+        top:720px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 16;
+        transform-origin:top;
+        animation: drawLine 10s  infinite;
+    }
+    .bgcolor6{
+        height: 15px;
+        width:192px;
+        left:0px;
+        top:750px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 16;
+        transform-origin:top;
+        animation: drawLine 10s  infinite;
+    }
+    .bgcolor7{
+        height: 15px;
+        width:576px;
+        left:0px;
+        top:780px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 29;
+        transform-origin:top;
+        animation: drawLine 10s  infinite;
+    }
+    .bgcolor8{
+        height: 15px;
+        width:60px;
+        left:144px;
+        top:810px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 16;
+        transform-origin:top;
+        animation: drawLine 10s  infinite;
+    }
+    .bgcolor9{
+        height: 15px;
+        width:48px;
+        left:144px;
+        top:840px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 16;
+        transform-origin:top;
+        animation: drawLine 10s  infinite;
+    }
+    .bgcolor10{
+        height: 15px;
+        width:48px;
+        left:144px;
+        top:870px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 16;
+        transform-origin:top;
+        animation: drawLine 10s  infinite;
+    }
+    .bgcolor11{
+        height: 15px;
+        width:192px;
+        left:384px;
+        top:720px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 29;
+        transform-origin:top;
+        animation: drawLine 10s  infinite;
+    }
+    .bgcolor12{
+        height: 15px;
+        width:192px;
+        left:384px;
+        top:750px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 29;
+        transform-origin:top;
+        animation: drawLine 10s  infinite;
+    }
+    .bgcolor13{
+        height: 90px;
+        width:24px;
+        left:480px;
+        top:810px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 20;
+        transform-origin:bottom;
+        animation: drawLine 10s  infinite;
+    }
+    .bgcolor14{
+        height: 90px;
+        width:24px;
+        left:528px;
+        top:810px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 20;
+        transform-origin:bottom;
+        animation: drawLine 10s  infinite;
+    }
+    .bgcolor15{
+        height:15px;
+        width:144px;
+        left:432px;
+        top:375px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 29;
+        transform-origin:bottom;
+        animation: drawLine 10s  infinite;
+    }
+    .bgcolor16{
+        height:15px;
+        width:144px;
+        left:432px;
+        top:405px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 29;
+        transform-origin:bottom;
+        animation: drawLine 10s  infinite;
+    }
+    .bgcolor17{
+        height:15px;
+        width:144px;
+        left:432px;
+        top:430px; 
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 29;
+        transform-origin:bottom;
+        animation: drawLine 10s  infinite;
+    }
+    .bgcolor18{
+        height: 60px;
+        width: 24px;
+        left:168px;
+        background-color:#dacdb6;
+        position: absolute;
+        z-index: 29;
+        top:720px; 
+        transform-origin:top;
+        animation: drawLine 9s cubic-bezier(0.6, 0, 0.9, 1) infinite;   
+    }
+    .white1{
+        height:60px;
+        width:48px;
+        left:336px;
+        top:390px; 
+        background-color:#fff;
+        position: absolute;
+        z-index: 30;
+        transform-origin:center;
+        animation: finally 10s  infinite;
+    }
+
+    @keyframes finally{
+        0%{
+            scale: 0%;
+        }
+
+        40%{
+            scale: 100%;
+        }
+        60%{
+            scale: 100%;
+        }
+        100%{
+            scale: 0%;
+        }
+    }
+    .white2{
+        height:15px;
+        width:144px;
+        left:192px;
+        top:450px; 
+        background-color:#fff;
+        position: absolute;
+        z-index: 30;
+        transform-origin:left center;
+        animation: drawLine 7s  infinite;
+    }
+    .white3{
+        height:15px;
+        width:144px;
+        left:192px;
+        top:480px; 
+        background-color:#fff;
+        position: absolute;
+        z-index: 30;
+        transform-origin:left center;
+        animation: drawLine 9s  infinite;
+    }
+
+    .white4{
+        height:15px;
+        width:144px;
+        left:192px;
+        top:510px; 
+        background-color:#fff;
+        position: absolute;
+        z-index: 30;
+        transform-origin:left center;
+        animation: drawLine 11s  infinite;
+    }
+
+    .white5{
+        height:15px;
+        width:48px;
+        left:336px;
+        top:735px; 
+        background-color:#fff;
+        position: absolute;
+        z-index: 30;
+        transform-origin:left center;
+        animation: drawLine 11s  infinite;
+    }
+    .white6{
+        height:15px;
+        width:48px;
+        left:336px;
+        top:765px; 
+        background-color:#fff;
+        position: absolute;
+        z-index: 30;
+        transform-origin:left center;
+        animation: drawLine 11s  infinite;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
