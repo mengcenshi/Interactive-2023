@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Record Audio</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .button {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: pink;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        line-height: 80px;
+        cursor: pointer;
+      }
+      .recording {
+        background-color: lightblue;
+      }
+      .dialog {
+        margin-top: 20px;
+        height: 100px;
+        border: 1px solid gray;
+        padding: 5px;
+        overflow-y: auto;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="button-container">
+      <div class="button"></div>
+    </div>
+    <div class="dialog"></div>
+    <script>
+      const button = document.querySelector('.button');
+      const dialog = document.querySelector('.dialog');
+      let isRecording = false;
+      let recordedChunks = [];
+
+      function startRecording() {
+        isRecording = true;
+        recordedChunks = [];
+        const mediaRecorder = new MediaRecorder(stream);
+        mediaRecorder.addEventListener('dataavailable', event => {
+          recordedChunks.push(event.data);
+        });
+        mediaRecorder.addEventListener('stop', () => {
+          const blob = new Blob(recordedChunks);
+          const url = URL.createObjectURL(blob);
+          const audio = document.createElement('audio');
+          audio.controls = true;
+          audio.src = url;
+          dialog.appendChild(audio);
+          // convert audio to text
+          const recognizer = new window.SpeechRecognition();
+          recognizer.lang = 'en-US';
+          recognizer.interimResults = true;
+          recognizer.maxAlternatives = 1;
+          recognizer.onresult = event => {
+            const result = event.results[event.resultIndex];
+            const transcription = result[0].transcript;
+            const textbox = document.createElement('textarea');
+            textbox.rows = 5;
+            textbox.value = transcription;
+            dialog.appendChild(textbox);
+          };
+          recognizer.onerror = event => {
+            console.error(event.error);
+          };
+          recognizer.onend = event => {
+            console.log('Speech recognition ended.');
+          };
+          recognizer.start();
+        });
+        mediaRecorder.start();
+      }
+
+      function stopRecording() {
+        isRecording = false;
+        mediaRecorder.stop();
+      }
+
+      button.addEventListener('mousedown', () => {
+        if (!isRecording) {
+          button.classList.add('recording');
+          startRecording();
+        }
+      });
+
+      button.addEventListener('mouseup', () => {
+        if (isRecording) {
+          button.classList.remove('recording');
+          stopRecording();
+        }
+      });
+
+      button.addEventListener('touchstart', () => {
+        if (!isRecording) {
+          button.classList.add('recording');
+          startRecording();
+        }
+      });
+
+      button.addEventListener('touchend', () => {
+        if (isRecording) {
+          button.classList.remove('recording');
+          stopRecording();
+        }
+      });
+
+      navigator.mediaDevices.getUserMedia({audio: true})
+        .then(stream => {
+          window.stream = stream;
+        });
+    </script>
+  </body>
+</html>
+

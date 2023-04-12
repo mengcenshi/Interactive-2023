@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Website</title>
+		 <link rel="stylesheet" type="text/css" href="style.css">
+		
+	</head>
+	<body>
+		<div class="container">
+		  <div class="unit" id="unit1">
+		    <img src="img/lisa.jpg" alt="Image 1" />
+		    <p>Text for unit 1</p>
+		    <button onclick="generateImage('unit1')">Generate</button>
+		    <input type="file" id="fileInput1" accept="image/*" style="display:none" onchange="generateImageFromFile('unit1', this)" />
+		  </div>
+		  <div class="unit" id="unit2">
+		    <img src="img/spencer.jpg" alt="Image 2" />
+		    <p>Text for unit 2</p>
+		    <button onclick="generateImage('unit2')">Generate</button>
+		    <input type="file" id="fileInput2" accept="image/*" style="display:none" onchange="generateImageFromFile('unit2', this)" />
+		  </div>
+		  <div class="unit" id="unit3">
+		    <img src="img/aashna.jpg" alt="Image 3" />
+		    <p>Text for unit 3</p>
+		    <button onclick="generateImage('unit3')">Generate</button>
+		    <input type="file" id="fileInput3" accept="image/*" style="display:none" onchange="generateImageFromFile('unit3', this)" />
+		  </div>
+		  <div class="unit" id="unit4">
+		    <img src="img/aimee.jpg" alt="Image 4" />
+		    <p>Text for unit 4</p>
+		    <button onclick="generateImage('unit4')">Generate</button>
+		    <input type="file" id="fileInput4" accept="image/*" style="display:none" onchange="generateImageFromFile('unit4', this)" />
+		  </div>
+		  <div class="unit" id="unit5">
+		    <img src="img/leah.jpg" alt="Image 5" />
+		    <p>Text for unit 5</p>
+		    <button onclick="generateImage('unit5')">Generate</button>
+		    <input type="file" id="fileInput5" accept="image/*" style="display:none" onchange="generateImageFromFile('unit5', this)" />
+		  </div>
+		  <div class="unit" id="unit6">
+		    <img src="image6.jpg" alt="Image 6" />
+		    <p>Text for unit 6</p>
+		    <button onclick="generateImage('unit6')">Generate</button>
+		    <input type="file" id="fileInput6" accept="image/*" style="display:none" onchange="generateImageFromFile('unit6', this)" />
+		  </div>
+		</div>
+
+		<script>
+			function generateImage() {
+			  var emoji1 = document.getElementById("select1").value;
+			  var emoji2 = document.getElementById("select2").value;
+			  var newImage;
+
+			  // create image sources for all possible combinations of emojis
+			  var imageSources = {
+			    "🐶🐱": "dog-cat.jpg",
+			    "🐶🐭": "dog-mouse.jpg",
+			    "🐱🐭": "cat-mouse.jpg",
+			    // add more image sources for other combinations of emojis
+			  };
+
+			  // get the image source for the selected combination of emojis
+			  var imageSource = imageSources[emoji1 + emoji2];
+
+			  // create a new image element with the selected source
+			  newImage = document.createElement("img");
+			  newImage.src = imageSource;
+
+			  // replace the existing image with the new one
+			  var imageContainer = document.getElementById("image-container");
+			  imageContainer.innerHTML = "";
+			  imageContainer.appendChild(newImage);
+			}
+		</script>
+	</body>
+</html>

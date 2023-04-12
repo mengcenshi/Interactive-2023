@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Random Generator Page</title>
+		<style type="text/css">
+			#container {
+				text-align: center;
+				margin-top:14rem;
+			}
+		
+			input[type="text"] {
+				font-size: 1.5rem;
+			}
+			button {
+				color:pink;
+				background: darkgray;
+			}
+			h1 {
+				color: pink;
+			}
+			table{
+				margin-left:14rem;
+
+			}
+		</style>
+		<script type="text/javascript">
+			// Define arrays of possible texts for each input box
+			var persons = [
+				"Aimee",
+				"Post Malone",
+				"Lady Gaga",
+				"Taylor Swift"
+
+			];
+			var times = [
+				"2002",
+				"winter",
+				"midnight",
+				"the 20th century"
+			];
+			var places = [
+				"the parking",
+				"the restroom",
+				"the beach",
+				"a museum"
+			];
+			var whatToDos = [
+				"knitting a sweate",
+				"comb hair",
+				"have a picnic",
+				"visit an exhibit"
+			];
+			// Function to generate random text
+			function generateRandomText(array, id) {
+				// Generate a random index for the array
+				var randomIndex = Math.floor(Math.random() * array.length);
+				// Set the value of the input box to the random text
+				document.getElementById(id).value = array[randomIndex];
+			}
+			// Function to add text to array
+			function addTextToArray(array, id) {
+				// Get the value from the input box
+				var newText = document.getElementById(id).value;
+				// Add the text to the array
+				array.push(newText);
+				// Clear the input box
+				document.getElementById(id).value = "";
+			}
+			// Function to compose sentence
+			function composeSentence() {
+			// Get the values from each input box
+				var person = document.getElementById("person").value;
+				var time = document.getElementById("time").value;
+				var place = document.getElementById("place").value;
+				var whatToDo = document.getElementById("what-to-do").value;
+				// If the input boxes are empty, use a random text instead
+				if (person == "") {
+					person = generateRandomText(persons, "person");
+				}
+				if (time == "") {
+					time = generateRandomText(times, "time");
+				}
+				if (place == "") {
+					place = generateRandomText(places, "place");
+				}
+				if (whatToDo == "") {
+					whatToDo = generateRandomText(whatToDos, "what-to-do");
+				}
+				// Construct the sentence
+				var sentence = "In " + time + ", " + person + " should " + whatToDo + " at " + place + ".";
+				// Display the sentence in the output box
+				document.getElementById("output").innerHTML = sentence;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<h1>Random Generator Page</h1>
+			<p>Generate random text by clicking the buttons below:</p>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<table>
+				<tr>
+					<td>
+						<input type="text" id="person" placeholder="Person">
+					</td>
+					<td>
+						<button onclick="generateRandomText(persons, 'person')">&#8635;</button>
+					</td>
+					<td>
+						+
+					</td>
+					<td>
+						<input type="text" id="time" placeholder="Time">
+					</td>
+					<td>
+						<button onclick="generateRandomText(times,'time')">&#8635;</button>
+					</td>
+					<td>
+						+
+					</td>
+					<td>
+						<input type="text" id="place" placeholder="place">
+					</td>
+					<td>
+						<button onclick="generateRandomText(places, 'place')">&#8635;</button>
+					</td>
+					<td>
+						+
+					</td>
+					<td>
+						<input type="text" id="what-to-do" placeholder="what-to-do">
+					</td>
+					<td>
+						<button onclick="generateRandomText(whatToDos, 'what-to-do')">&#8635;</button>
+					</td>
+					
+				</tr>
+			</table>
+			<br>
+			<br>
+			<br>
+			<br>
+			<button onclick="composeSentence()">Compose</button>
+			<div id="output"></div>
+		</div>
+	</body>
+</html>
+
