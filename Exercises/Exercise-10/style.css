@@ -1,0 +1,57 @@
+/*body{
+	width:100%;
+	height: 1000vh;
+
+}
+.purpleCircle{
+	width: 100px;
+	height: 100px;
+	background-color:purple;
+	border-radius: 50%;
+	display:inline-block;
+}
+.yellowSquare{
+	width: 100px;
+	height: 100px;
+	background-color:yellow;
+	border-radius: 0%;
+	display:binline-block;
+}
+*/
+
+.paragraph{
+ font-family: serif;
+ font-size: 50px;
+ color: gray;
+ background-color: #DADADA;
+}
+
+.rainbowClass{
+ font-family: monospace;
+ font-size: 80px;
+ color: white;
+ background-image: linear-gradient(20deg, pink, orange, green);
+}
+
+.dark{
+ font-family: sans-serif;
+ color: white;
+ background-color: black;
+
+}
+
+div#rainbow{
+ width: 100px;
+ height: 100px;
+ border-radius: 100%;
+ background-color: red;
+}
+
+div#dark{
+ width: 100px;
+ height: 100px;
+ border-radius: 100%;
+ background-color: black;
+}
+
+

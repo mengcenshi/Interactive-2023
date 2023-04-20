@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Slider Demo</title>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+	</head>
+	<body>
+		
+		<div class="container_container__iGugF" data-color-id="3">
+			<div class="container_content__UAFw0">
+				<div class="centralSlider_container__em0Da">
+					<svg preserveAspectRatio="none" class="centralSlider_svg__-HULC"viewBox="0 0 387.4 309" ;>
+						<path class="centralSlider_sliderPath__PEzyy" fill="rgb(240, 128, 25)" fill-opacity="1" stroke-width="12" stroke="rgb(34, 34, 34)" stroke-opacity="1" stroke-linecap="round" d="M 0 154.5 V 69 A 69 69 0 0 1 69 0 H 318.4 A 69 69 0 0 1 387.4 69 V 255.95 A 53.050000000000004 53.050000000000004 0 0 1 281.29999999999995 255.95 V 175.10000000000002 A 69 69 1 0 0 212.29999999999995 106.10000000000001 H 154.5 A 48.39999999999999 48.39999999999999 1 0 0 154.5 202.89999999999998 H 192.24999999999997 A 53.050000000000004 53.050000000000004 0 0 1 192.24999999999997 309 H 69 A 69 69 0 0 1 0 240 Z"></path>
+						<path id="sliderPath" d="M 192.24999999999997 255.95 H 106.10000000000001 A 53.050000000000004 53.050000000000004 0 0 1 53.050000000000004 202.89999999999998 V 106.10000000000001 A 53.050000000000004 53.050000000000004 0 0 1 106.10000000000001 53.050000000000004 H 281.29999999999995 A 53.050000000000004 53.050000000000004 0 0 1 334.34999999999997 106.10000000000001 V 255.95" fill="none" stroke-width="12" stroke="rgb(34, 34, 34)" stroke-linecap="round" style="pointer-events: none;"></path>
+						<circle cx="191.49197387695312" cy="255.9499969482422" r="31.050000000000004" id="path-handle" fill="rgb(255, 255, 255)" stroke-width="24" stroke="rgb(34, 34, 34)" stroke-opacity="1" ></circle>
+						<path stroke-width="1.5" stroke="rgb(34, 34, 34)" stroke-linecap="round" fill="none" class="centralSlider_arrow__Mhb0n" transform="rotate(-180, 191.49197387695312 255.9499969482422)" d="M 181.49197387695312 255.9499969482422 H 201.49197387695312"></path>
+						<path stroke-width="1.5" stroke="rgb(34, 34, 34)" stroke-linecap="round" fill="none" class="centralSlider_arrow__Mhb0n" transform="rotate(-180, 191.49197387695312 255.9499969482422)" d="M 191.49197387695312 246.9499969482422 L 201.49197387695312 255.9499969482422 L 191.49197387695312 264.9499969482422"></path>
+						<path d="M10 80 Q 95 10 180 80" />
+					</svg>
+					<canvas class="centralSlider_canvas__D5nbj" width="387.4" height="309"></canvas>
+				</div>
+			</div>
+		</div>
+	
+		<div class="cards">
+			<h3>s</h3>
+			<h1> www.mc.cn</h1>
+			<div class="card card_one">
+				<div class="card_bg"></div>
+				<img class="card_img"src="img/spencer.jpg" />
+				<div class="card_text">
+					<p class="card_title">Princess Mononoke</p>
+				</div>
+			</div>
+			<div class="card card_two">
+				<div class="card_bg"></div>
+				<img class="card_img" src="img/aimee.jpg" />
+				<div class="card_text">
+					<p class="card_title">Spirited Away</p>
+				</div>
+			</div>
+			<div class="card card_three">
+				<div class="card_bg"></div>
+				<img class="card_img" src="img/lisa.jpg" />
+				<div class="card_text">
+					<p class="card_title">Howl's Moving Castle</p>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			var cards = document.querySelector(".cards");
+			var images = document.querySelectorAll(".card_img");
+			var backgrounds = document.querySelectorAll(".card_bg");
+			var range =40;
+
+			//const calcvalue = (a, b) => (((a * 100) / b) * (range / 100) - (range / 2)). toFixed(1);
+			var calcvalue = function calcvalue(a, b){return (a / b * range - range / 2).toFixed(1);}; 
+
+			var timeout = void 0;
+			document. addEventListener('mousemove', function (_ref) {var × = _ref.x,y = _ref.y;
+				if (timeout){
+					window. cancelAnimationFrame(timeout):
+				}
+
+				timeout = window.requestAnimationframe (function (){
+					var yValue = calcvalue(y, window.innerHeight);
+					var xValue = calcValue(x, window.innerWidth);
+					console.log(xValue, yValue);
+					cards.style.transform="rotateX("+ yValue+ "deg) rotateY(" + xValue + "deg)":
+
+					[].forEach.call(images,function(image){
+						image.style.transform = "translateX(" + -xValue +"px)translateY(" + yValue + "px)";
+
+					});
+					[].forEach.call(backgrounds,function (background) {
+						background.style.backgroundposition = xValue * .45 + "px" + -yValue * .45 +"px";
+
+					});
+				});
+			},false);
+		
+
+		
+			function rotateTrack(value) {
+				const degrees = value;
+				const track = document.querySelector('.slider-track');
+				track.style.transform = `rotate(${degrees}deg)`;
+			}
+		</script>
+	</body>
+</html>
+

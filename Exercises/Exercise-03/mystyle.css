@@ -1,0 +1,117 @@
+	
+.container_container__iGugF{
+		width: 424.4px; 
+		height: 346px; 
+		left: 212.2px; 
+		top: 173px; 
+		background-color: rgba(245, 181, 57, 0); 
+		z-index: inherit; 
+		pointer-events: auto;
+
+}	
+.container_content__UAFw0{
+		width: 399.4px; 
+		height: 321px; 
+		left: 12.5px; 
+		top: 12.5px; 
+		border-radius: 69px; 
+		background-color: transparent; 
+		border: transparent; 
+		overflow: visible;
+	}
+.centralSlider_svg__-HULC{
+		width:387.4;
+		height: 309 ;
+
+		top: 6px; 
+		left: 6px;
+}
+
+.circle{
+		pointer-events: none; 
+		paint-order: stroke;
+}
+
+.path{
+	fill: rgb(240, 128, 25);
+    fill-opacity: 1;
+    stroke-width: 12;
+    stroke: rgb(34, 34, 34);
+    stroke-opacity: 1;
+    stroke-linecap: round;
+    d: path("M 0 154.5 V 69 A 69 69 0 0 1 69 0 H 318.4 A 69 69 0 0 1 387.4 69 V 255.95 A 53.05 53.05 0 0 1 281.3 255.95 V 175.1 A 69 69 1 0 0 212.3 106.1 H 154.5 A 48.4 48.4 1 0 0 154.5 202.9 H 192.25 A 53.05 53.05 0 0 1 192.25 309 H 69 A 69 69 0 0 1 0 240 Z");
+}
+/* Define the keyframes for the animation */
+@keyframes slide {
+  from { transform: translateX(0); } /* Starting position */
+  to { transform: translateX(100%); } /* Ending position */
+}
+
+/* Apply the animation to the slider element */
+.slider {
+  animation: slide 5s linear infinite; /* 5s duration, linear timing, infinite loop */
+  transform-origin: left center; /* Set the transform origin to the left center of the element */
+}
+.cards {
+	background: #fff;
+	border-radius: 15px;
+	box-shadow: 0px 10px 20px 20px rgba(0, 0, 0, 0.17);
+	display: inline-block;
+	padding: 30px 35px;
+	-webkit-perspective: 1800px;
+			perspective: 1800px;
+	text-align: left;
+	-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+	-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+	-webkit-transform: rotateX(11deg) rotateY(16.5deg);
+			transform: rotateX(11deg) rotateY(16.5deg);
+	min-width: 595px;
+}
+.card {
+	border-radius: 15px;
+	box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.6);
+	display: inline-block;
+	height: 250px;
+	overflow: hidden;
+	-webkit-perspective: 1200px;
+			perspective: 1200px;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+	-webkit-transform: translatez(35px);
+			transform: translatez(35px);
+	transition: -webkit-transform 200ms ease-out;
+	transition: transform 200ms ease-out;
+	transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+	width: 175px;
+	text-align: center;
+}
+.card_one .card_img {
+	top: 14px;
+	right: -10px;
+	height: 110%;
+}
+.card_one .card_bg {
+	background: url("img/leah.jpg") center/cover no-repeat;
+}
+.card_two .card_img {
+	top: 25px;
+}
+.card_two .card_bg {
+	background: url("img/3dr _spirited.jpg") center/cover no-repeat;
+}
+
+.card_three .card_img {
+	top: 5px;
+	left: -4px;
+	height: 110%;
+}
+.card_three .card_bg{
+	background: url("img/3dr _howlbg.jpg") center/cover no-repeat;
+}
+
+
+
+
