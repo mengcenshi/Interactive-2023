@@ -1,15 +1,15 @@
-h2{
+h1{
     color:#ff32a5;
-    font-size: 24pt;
+    font-size: 50pt;
     font-family: sans-serif;
-     margin-left: 540px ;
+     margin-left: 750px ;
      z-index: 1;
      position: absolute;
 }
 img{
-    width:1000px;
+    width:1247px;
     position: absolute;
-    left:85px;
+    left:214px;
     z-index: -1;
 }
 
@@ -43,9 +43,9 @@ body {
 }
 
 .month {
-  max-width: 560px;
-  margin-left: 296px ;
-  padding-top: 150px;
+  max-width: 734px;
+  margin-left: 459px ;
+  padding-top: 247px;
 
 }
 
