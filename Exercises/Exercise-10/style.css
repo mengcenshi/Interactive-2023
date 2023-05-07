@@ -1,57 +1,65 @@
-/*body{
-	width:100%;
-	height: 1000vh;
-
+h2{
+    color:#ff32a5;
+    font-size: 24pt;
+    font-family: sans-serif;
+     margin-left: 540px ;
+     z-index: 1;
+     position: absolute;
 }
-.purpleCircle{
-	width: 100px;
-	height: 100px;
-	background-color:purple;
-	border-radius: 50%;
-	display:inline-block;
-}
-.yellowSquare{
-	width: 100px;
-	height: 100px;
-	background-color:yellow;
-	border-radius: 0%;
-	display:binline-block;
-}
-*/
-
-.paragraph{
- font-family: serif;
- font-size: 50px;
- color: gray;
- background-color: #DADADA;
+img{
+    width:1000px;
+    position: absolute;
+    left:85px;
+    z-index: -1;
 }
 
-.rainbowClass{
- font-family: monospace;
- font-size: 80px;
- color: white;
- background-image: linear-gradient(20deg, pink, orange, green);
+.week {
+  display: flex;
 }
 
-.dark{
- font-family: sans-serif;
- color: white;
- background-color: black;
+.day {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+.week:first-of-type .day:first-of-type {
+  margin-left: 14.3%;
+}
+
+.week:last-of-type .day:last-of-type {
+  margin-right: 42.9%;
+}
+
+/* OTHER STYLES */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(top, #fad961, #f76d1d);
+  background-attachment: fixed;
+}
+
+.month {
+  max-width: 560px;
+  margin-left: 296px ;
+  padding-top: 150px;
 
 }
 
-div#rainbow{
- width: 100px;
- height: 100px;
- border-radius: 100%;
- background-color: red;
+.week {
+  height: 80px;
 }
 
-div#dark{
- width: 100px;
- height: 100px;
- border-radius: 100%;
- background-color: black;
+.day {
+
+  color: #ff32a5;
+  padding: 5px;
+/*  background-color: transparentize(white, 0.30);*/
+    background-color: rgba(255, 220, 255, 0.2);
+  box-shadow: 
+    -1px -1px #ff32a5, 
+    inset -1px -1px 0 0 #ff32a5;
 }
-
-

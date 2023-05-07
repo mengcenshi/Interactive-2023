@@ -46,30 +46,15 @@
 		</div>
 
 		<script>
-			function generateImage() {
-			  var emoji1 = document.getElementById("select1").value;
-			  var emoji2 = document.getElementById("select2").value;
-			  var newImage;
+			function generateImage(unitId) {
+			  // Get the specified unit element
+			  const unit = document.getElementById(unitId);
 
-			  // create image sources for all possible combinations of emojis
-			  var imageSources = {
-			    "🐶🐱": "dog-cat.jpg",
-			    "🐶🐭": "dog-mouse.jpg",
-			    "🐱🐭": "cat-mouse.jpg",
-			    // add more image sources for other combinations of emojis
-			  };
+			  // Set the image src attribute to the path of your desired image file
+			  unit.querySelector('img').src = "path/to/your/image.jpg";
 
-			  // get the image source for the selected combination of emojis
-			  var imageSource = imageSources[emoji1 + emoji2];
-
-			  // create a new image element with the selected source
-			  newImage = document.createElement("img");
-			  newImage.src = imageSource;
-
-			  // replace the existing image with the new one
-			  var imageContainer = document.getElementById("image-container");
-			  imageContainer.innerHTML = "";
-			  imageContainer.appendChild(newImage);
+			  // Set the text content of the unit
+			  unit.querySelector('p').textContent = 'Generated text for ' + unitId;
 			}
 		</script>
 	</body>
